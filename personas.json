@@ -1,0 +1,39 @@
+{
+  "personas": [
+    {
+      "nombre": "marcos",
+      "edad": 23,
+      "gmail": "marcos@hotmail.com"
+    },
+    {
+      "nombre": "javier",
+      "edad": 28,
+      "gmail": "javier@hotmail.com"
+    },
+    {
+      "nombre": "juan",
+      "edad": 45,
+      "gmail": "juan@hotmail.com"
+    },
+    {
+      "nombre": "mariano",
+      "edad": 29,
+      "gmail": "mariano@hotmail.com"
+    },
+    {
+      "nombre": "maria",
+      "edad": 29,
+      "gmail": "maria@hotmail.com"
+    },
+    {
+      "nombre": "mar",
+      "edad": 29,
+      "gmail": "mar@hotmail.com"
+    },
+    {
+      "nombre": "mariano",
+      "edad": 29,
+      "gmail": "mariano@hotmail.com"
+    }
+  ]
+}
