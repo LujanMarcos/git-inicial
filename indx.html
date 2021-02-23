@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Json </title>
+</head>
+<body>
+<ul id="personas"></ul>
+<script>
+    // var persona = {
+    //     "nombre": "mariano",
+    //     "apellido": "ceisostomo",
+    //     "edad": 22,
+    //     "nickname": "fazt",
+    //     "saluda": "hola soy fazt"
+    // };
+    //
+    // var personas = [
+    //     {
+    //         "nombre": "marcos",
+    //         "edad": 23,
+    //         "gmail": "marcos@hotmail.com"
+    //     },
+    //     {
+    //         "nombre": "javier",
+    //         "edad": 28,
+    //         "gmail": "javier@hotmail.com"
+    //     },
+    //     {
+    //         "nombre": "juan",
+    //         "edad": 45,
+    //         "gmail": "juan@hotmail.com"
+    //     },
+    //     {
+    //         "nombre": "mariano",
+    //         "edad": 29,
+    //         "gmail": "mariano@hotmail.com"
+    //     }
+    // ];
+    //
+    // var salida = '';
+    // for (var i = 0; i<personas.length;i++){
+    //     // salida+= '<li>'+personas[i].nombre+' es '+personas[i].gmail+'</li>';
+    //     salida += `<li>${personas[i].nombre} tiene mail ${personas[i].gmail}</li>`
+    // }
+    // document.getElementById('personas').innerHTML = salida;
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var respuesta = JSON.parse(xhttp.responseText);
+            var personas = respuesta.personas;
+            var salida = '';
+            for (var i = 0; i < personas.length; i++) {
+                // salida+= '<li>'+personas[i].nombre+' es '+personas[i].gmail+'</li>';
+                salida += `<li>${personas[i].nombre} tiene mail ${personas[i].gmail}</li>`
+            }
+            document.getElementById('personas').innerHTML = salida;
+        }
+    };
+    xhttp.open("GET", "personas.json", true);
+    xhttp.send();
+
+
+</script>
+
+</body>
+</html>
